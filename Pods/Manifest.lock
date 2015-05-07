@@ -1,0 +1,20 @@
+PODS:
+  - BugfenderSDK (0.3.3)
+
+DEPENDENCIES:
+  - BugfenderSDK (from `https://github.com/bugfender/BugfenderSDK-iOS.git`, tag `0.3.3`)
+
+EXTERNAL SOURCES:
+  BugfenderSDK:
+    :git: https://github.com/bugfender/BugfenderSDK-iOS.git
+    :tag: 0.3.3
+
+CHECKOUT OPTIONS:
+  BugfenderSDK:
+    :git: https://github.com/bugfender/BugfenderSDK-iOS.git
+    :tag: 0.3.3
+
+SPEC CHECKSUMS:
+  BugfenderSDK: 94e976e2c9357566931b381b247338f4584b8f98
+
+COCOAPODS: 0.37.1
