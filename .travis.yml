@@ -1,3 +1,2 @@
 language: objective-c
-xcode_workspace: BugfenderSDK-iOS-swift-sample.xcworkspace
-xcode_scheme: BugfenderSDK-iOS-swift-sample
+script: xctool -workspace BugfenderSDK-iOS-swift-sample.xcworkspace.xcworkspace -scheme BugfenderSDK-iOS-swift-sample test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
