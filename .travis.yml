@@ -1,1 +1,3 @@
 language: objective-c
+xcode_workspace: BugfenderSDK-iOS-swift-sample.xcworkspace
+xcode_scheme: BugfenderSDK-iOS-swift-sample
