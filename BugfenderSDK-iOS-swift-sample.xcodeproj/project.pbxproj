@@ -190,7 +190,9 @@
 		42F393341AFB944C00E50204 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Bugfender;
 				TargetAttributes = {
 					42F3933B1AFB944C00E50204 = {
@@ -337,6 +339,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -407,6 +410,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "BugfenderSDK-iOS-swift-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugfender.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BugfenderSDK-iOS-swift-sample/BugfenderSDK-iOS-swift-sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -421,6 +425,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "BugfenderSDK-iOS-swift-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugfender.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BugfenderSDK-iOS-swift-sample/BugfenderSDK-iOS-swift-sample-Bridging-Header.h";
 			};
@@ -440,6 +445,7 @@
 				);
 				INFOPLIST_FILE = "BugfenderSDK-iOS-swift-sampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugfender.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BugfenderSDK-iOS-swift-sample.app/BugfenderSDK-iOS-swift-sample";
 			};
@@ -455,6 +461,7 @@
 				);
 				INFOPLIST_FILE = "BugfenderSDK-iOS-swift-sampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugfender.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BugfenderSDK-iOS-swift-sample.app/BugfenderSDK-iOS-swift-sample";
 			};
