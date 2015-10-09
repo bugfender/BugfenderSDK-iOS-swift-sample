@@ -9,8 +9,10 @@
 import Foundation
 
 func BFLog(message: String, filename: String = __FILE__, line: Int = __LINE__, funcname: String = __FUNCTION__) {
-    Bugfender.logLineNumber(line, method: funcname, file: filename.lastPathComponent, level: BFLogLevel.Default, tag: nil, message: message)
+    let file = ("\(filename)" as NSString).lastPathComponent as String
+    
+    Bugfender.logLineNumber(line, method: funcname, file: file, level: BFLogLevel.Default, tag: nil, message: message)
     #if DEBUG
-        NSLog("[\(filename.lastPathComponent):\(line)] \(funcname) - %@", message)
+        NSLog("[\(file):\(line)] \(funcname) - %@", message)
     #endif
 }
