@@ -16,48 +16,48 @@ class ViewController: UIViewController {
         BFLog("View did load")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         BFLog("View will appear")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         BFLog("View did appear")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         BFLog("View will disappear")
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         BFLog("View did disappear")
     }
 
-    @IBAction func doFlower(sender: AnyObject) {
+    @IBAction func doFlower(_ sender: AnyObject) {
         BFLog("Flower Power!")
     }
     
-    @IBAction func doTree(sender: AnyObject) {
+    @IBAction func doTree(_ sender: AnyObject) {
         BFLog("I like Trees :D")
     }
 
-    @IBAction func doFood(sender: AnyObject) {
+    @IBAction func doFood(_ sender: AnyObject) {
         BFLog("Lets go to eat sushi!")
     }
 
-    @IBAction func doRock(sender: AnyObject) {
+    @IBAction func doRock(_ sender: AnyObject) {
         BFLog("Rock and roll is my best friend!")
     }
 
-    @IBAction func sliderChanged(slider: UISlider) {
+    @IBAction func sliderChanged(_ slider: UISlider) {
         BFLog("Slider Value: \(slider.value)");
     }
     
-    @IBAction func buttonSwitched(sender: UISwitch) {
-        BFLog("Switch value: " + (sender.on ? "ON" : "OFF"))
+    @IBAction func buttonSwitched(_ sender: UISwitch) {
+        BFLog("Switch value: " + (sender.isOn ? "ON" : "OFF"))
     }
 }
 

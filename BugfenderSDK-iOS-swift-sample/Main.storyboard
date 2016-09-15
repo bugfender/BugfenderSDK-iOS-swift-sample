@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Bugfender_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BugfenderSDK_iOS_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8XF-Bw-5s7">
-                                <rect key="frame" x="18" y="269" width="284" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="Wn6-7U-h88"/>
                                     <constraint firstAttribute="height" constant="30" id="ea3-Ce-5f3"/>
@@ -27,59 +28,54 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-Hm-GBa">
-                                <rect key="frame" x="114" y="205" width="93" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="Lpu-6a-rpl"/>
                                     <constraint firstAttribute="height" constant="30" id="TDH-a0-YpT"/>
                                 </constraints>
                                 <state key="normal" title="Rock">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ELb-EX-2PZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAD-VC-3Mx">
-                                <rect key="frame" x="114" y="167" width="93" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="bKx-tB-4qJ"/>
                                     <constraint firstAttribute="height" constant="30" id="rfO-gu-hOW"/>
                                 </constraints>
                                 <state key="normal" title="Food">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doFood:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9I4-Oc-feI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWk-Mg-M0a">
-                                <rect key="frame" x="114" y="129" width="93" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="MAQ-Ov-WCO"/>
                                     <constraint firstAttribute="height" constant="30" id="olU-vq-Hn2"/>
                                 </constraints>
                                 <state key="normal" title="Tree">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doTree:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cMU-GH-2dd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-iX-IQz">
-                                <rect key="frame" x="114" y="91" width="93" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="05z-Hp-D0L"/>
                                     <constraint firstAttribute="width" constant="93" id="3lr-ec-la3"/>
                                 </constraints>
                                 <state key="normal" title="Flower">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="doFlower:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Yp-AD-GK7"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xu1-HK-258">
-                                <rect key="frame" x="136" y="335" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="yTC-yl-OmP"/>
                                     <constraint firstAttribute="height" constant="31" id="yTX-Vg-UE3"/>
@@ -88,14 +84,21 @@
                                     <action selector="buttonSwitched:" destination="vXZ-lx-hvc" eventType="valueChanged" id="VhI-SK-wNB"/>
                                 </connections>
                             </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BugFender-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ual-cJ-mN7">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NZk-n0-bHI"/>
+                                    <constraint firstAttribute="width" constant="100" id="nnU-gD-tzY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="WAK-Hm-GBa" secondAttribute="centerX" id="1bU-kU-TsC"/>
                             <constraint firstItem="xAD-VC-3Mx" firstAttribute="top" secondItem="oWk-Mg-M0a" secondAttribute="bottom" constant="8" id="1fh-Ry-vLm"/>
                             <constraint firstItem="8XF-Bw-5s7" firstAttribute="top" secondItem="WAK-Hm-GBa" secondAttribute="bottom" constant="34" id="2xy-zf-cWP"/>
                             <constraint firstAttribute="centerX" secondItem="2Za-iX-IQz" secondAttribute="centerX" id="3kH-bp-UVl"/>
                             <constraint firstItem="oWk-Mg-M0a" firstAttribute="top" secondItem="2Za-iX-IQz" secondAttribute="bottom" constant="8" id="6wD-8d-gSq"/>
+                            <constraint firstItem="Ual-cJ-mN7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="7FU-Yr-X03"/>
                             <constraint firstAttribute="centerX" secondItem="xu1-HK-258" secondAttribute="centerX" id="8T4-he-daz"/>
                             <constraint firstAttribute="centerX" secondItem="xAD-VC-3Mx" secondAttribute="centerX" id="9hY-Hb-3rZ"/>
                             <constraint firstAttribute="centerY" secondItem="8XF-Bw-5s7" secondAttribute="centerY" id="Ih4-pr-xEr"/>
@@ -103,16 +106,21 @@
                             <constraint firstItem="xu1-HK-258" firstAttribute="top" secondItem="8XF-Bw-5s7" secondAttribute="bottom" constant="36" id="Thy-wK-baV"/>
                             <constraint firstItem="WAK-Hm-GBa" firstAttribute="top" secondItem="xAD-VC-3Mx" secondAttribute="bottom" constant="8" id="ghO-7x-cqA"/>
                             <constraint firstAttribute="centerX" secondItem="oWk-Mg-M0a" secondAttribute="centerX" id="iGJ-3o-in6"/>
+                            <constraint firstItem="Ual-cJ-mN7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zIR-XH-E9f"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.5" y="35.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BugFender-logo" width="200" height="200"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>
