@@ -13,15 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let emptyBugFenderAppKey = "insert your key here!"
-
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
-        let yourBugFenderAppKey = self.emptyBugFenderAppKey
-
-        if (yourBugFenderAppKey == self.emptyBugFenderAppKey) {
-            assert(false, "OOPS! You do need to set a proper App Key to make this sample work. Go to bugfender.com and create an App. It's easy!")
-        }
+        let yourBugFenderAppKey = "4k4QFtHpvkQGDdCfF4fT6BAfv4PQpgGs" //TODO: insert your key here!
         
         Bugfender.activateLogger(yourBugFenderAppKey)
         
