@@ -14,8 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Bugfender
-</string>
+			<string>See http://bugfender.com/terms-of-service/</string>
 			<key>Title</key>
 			<string>BugfenderSDK</string>
 			<key>Type</key>
