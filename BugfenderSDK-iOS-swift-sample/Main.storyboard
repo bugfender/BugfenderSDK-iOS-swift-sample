@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -90,6 +90,18 @@
                                     <constraint firstAttribute="width" constant="100" id="nnU-gD-tzY"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW9-Yw-n8b">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ks9-Tc-q0N"/>
+                                    <constraint firstAttribute="width" constant="93" id="UXg-Ge-HcI"/>
+                                </constraints>
+                                <state key="normal" title="Send Issue">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doSendIssue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w8q-Dm-qxZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,11 +113,13 @@
                             <constraint firstItem="Ual-cJ-mN7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="7FU-Yr-X03"/>
                             <constraint firstAttribute="centerX" secondItem="xu1-HK-258" secondAttribute="centerX" id="8T4-he-daz"/>
                             <constraint firstAttribute="centerX" secondItem="xAD-VC-3Mx" secondAttribute="centerX" id="9hY-Hb-3rZ"/>
+                            <constraint firstItem="xW9-Yw-n8b" firstAttribute="top" secondItem="xu1-HK-258" secondAttribute="bottom" constant="60" id="F76-Hj-raE"/>
                             <constraint firstAttribute="centerY" secondItem="8XF-Bw-5s7" secondAttribute="centerY" id="Ih4-pr-xEr"/>
                             <constraint firstAttribute="centerX" secondItem="8XF-Bw-5s7" secondAttribute="centerX" id="Opa-uS-7vC"/>
                             <constraint firstItem="xu1-HK-258" firstAttribute="top" secondItem="8XF-Bw-5s7" secondAttribute="bottom" constant="36" id="Thy-wK-baV"/>
                             <constraint firstItem="WAK-Hm-GBa" firstAttribute="top" secondItem="xAD-VC-3Mx" secondAttribute="bottom" constant="8" id="ghO-7x-cqA"/>
                             <constraint firstAttribute="centerX" secondItem="oWk-Mg-M0a" secondAttribute="centerX" id="iGJ-3o-in6"/>
+                            <constraint firstItem="xW9-Yw-n8b" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="pVV-oo-FOU"/>
                             <constraint firstItem="Ual-cJ-mN7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zIR-XH-E9f"/>
                         </constraints>
                     </view>
