@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		210EFF6682FC102FD1DBFA69 /* libPods-BugfenderSDK-iOS-swift-sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF2A0EF80B8FDFD01D2C9B5 /* libPods-BugfenderSDK-iOS-swift-sample.a */; };
 		42383AB51AFBBEFE006AF7D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42383AB41AFBBEFE006AF7D7 /* Images.xcassets */; };
 		429DE7A51AFBC64200CC608D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 429DE7A41AFBC64200CC608D /* Settings.bundle */; };
 		42F393421AFB944C00E50204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F393411AFB944C00E50204 /* AppDelegate.swift */; };
@@ -15,7 +14,7 @@
 		42F3934C1AFB944C00E50204 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F3934A1AFB944C00E50204 /* LaunchScreen.xib */; };
 		42F393581AFB944C00E50204 /* Bugfender_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F393571AFB944C00E50204 /* Bugfender_sampleTests.swift */; };
 		42F393621AFB947C00E50204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F393611AFB947C00E50204 /* Main.storyboard */; };
-		42F7F77C1AFBB015008D372E /* BugfenderSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F7F77B1AFBB015008D372E /* BugfenderSwift.swift */; };
+		649B56A15226E03722912E96 /* Pods_BugfenderSDK_iOS_swift_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF068499ABEFCC757394D223 /* Pods_BugfenderSDK_iOS_swift_sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		0BACAFC7C5F3080A7216AE1B /* Pods-BugfenderSDK-iOS-swift-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugfenderSDK-iOS-swift-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugfenderSDK-iOS-swift-sample/Pods-BugfenderSDK-iOS-swift-sample.release.xcconfig"; sourceTree = "<group>"; };
-		1FF2A0EF80B8FDFD01D2C9B5 /* libPods-BugfenderSDK-iOS-swift-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugfenderSDK-iOS-swift-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42383AB41AFBBEFE006AF7D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		429DE7A41AFBC64200CC608D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		42F3933C1AFB944C00E50204 /* BugfenderSDK-iOS-swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BugfenderSDK-iOS-swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +41,8 @@
 		42F393571AFB944C00E50204 /* Bugfender_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bugfender_sampleTests.swift; sourceTree = "<group>"; };
 		42F393611AFB947C00E50204 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		42F393631AFB980000E50204 /* BugfenderSDK-iOS-swift-sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BugfenderSDK-iOS-swift-sample-Bridging-Header.h"; sourceTree = "<group>"; };
-		42F7F77B1AFBB015008D372E /* BugfenderSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugfenderSwift.swift; sourceTree = "<group>"; };
 		7FB9F000769A793858BD1F74 /* Pods-BugfenderSDK-iOS-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugfenderSDK-iOS-swift-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BugfenderSDK-iOS-swift-sample/Pods-BugfenderSDK-iOS-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
+		FF068499ABEFCC757394D223 /* Pods_BugfenderSDK_iOS_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BugfenderSDK_iOS_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210EFF6682FC102FD1DBFA69 /* libPods-BugfenderSDK-iOS-swift-sample.a in Frameworks */,
+				649B56A15226E03722912E96 /* Pods_BugfenderSDK_iOS_swift_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +94,6 @@
 				42383AB41AFBBEFE006AF7D7 /* Images.xcassets */,
 				42F3933F1AFB944C00E50204 /* Supporting Files */,
 				42F393631AFB980000E50204 /* BugfenderSDK-iOS-swift-sample-Bridging-Header.h */,
-				42F7F77B1AFBB015008D372E /* BugfenderSwift.swift */,
 			);
 			path = "BugfenderSDK-iOS-swift-sample";
 			sourceTree = "<group>";
@@ -130,7 +127,7 @@
 		A3D379CE3A31C6A001499F7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FF2A0EF80B8FDFD01D2C9B5 /* libPods-BugfenderSDK-iOS-swift-sample.a */,
+				FF068499ABEFCC757394D223 /* Pods_BugfenderSDK_iOS_swift_sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,7 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		157C982649CDC213E1F4970A /* [CP] Copy Pods Resources */ = {
@@ -302,7 +299,6 @@
 			files = (
 				42F393441AFB944C00E50204 /* ViewController.swift in Sources */,
 				42F393421AFB944C00E50204 /* AppDelegate.swift in Sources */,
-				42F7F77C1AFBB015008D372E /* BugfenderSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

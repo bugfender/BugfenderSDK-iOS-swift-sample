@@ -1,21 +1,58 @@
-Bugfender SDK for iOS [![Build Status](https://travis-ci.org/bugfender/BugfenderSDK-iOS-swift-sample.svg)](https://travis-ci.org/bugfender/BugfenderSDK-iOS-swift-sample) [![Available in CocoaPods](https://img.shields.io/cocoapods/v/BugfenderSDK.svg)](https://cocoapods.org/pods/BugfenderSDK) [![CocoaDocs](https://img.shields.io/badge/docs-%E2%9C%93-blue.svg)](http://cocoadocs.org/docsets/BugfenderSDK/) 
+Bugfender SDK for iOS [![Available in CocoaPods](https://img.shields.io/cocoapods/v/BugfenderSDK.svg)](https://cocoapods.org/pods/BugfenderSDK) [![CocoaDocs](https://img.shields.io/badge/docs-%E2%9C%93-blue.svg)](http://cocoadocs.org/docsets/BugfenderSDK/) 
 ===================
 
 Bugfender is a cloud service to collect mobile application logs. Developers can control log sending programmatically and manually for each device. Logs are available at the [Bugfender console](https://app.bugfender.com/). You'll need an account.
 
-BugfenderSDK works for iOS 6.0 and better.
+BugfenderSDK works for iOS 8.0 and better.
 
-# Getting started
+# Installing the SDK
+First of all you will need to add the framework to your project.
 
-## 1. Install the SDK
+## Using CocoaPods
 
-If using CocoaPods:
+1. Create a Podfile if you don't have one: `pod init`
+1. Add a line to your Podfile:
+   * Swift or mixed projects: `pod 'BugfenderSDK', '~> 1.4'`
+   * Objective-C projects: `pod 'BugfenderSDK/ObjC', '~> 1.4'` (doesn't require the Swift runtime)
+1. Save the file and run: `pod install`. This creates an `.xcworkspace` file for your app. Use this file for all future development on your application.
 
-```ruby
-pod 'BugfenderSDK', '~> 0.3'
+## Manual
+
+If you prefer to install the SDK manually:
+
+1. Go to your **Project** > **Your Target** > **General** > **Linked Frameworks and Libraries** and drag `BugfenderSDK.framework` there.
+1. Make sure you have `SystemConfiguration.framework` and `MobileCoreServices.framework` there as well.
+1. [Add -ObjC to your linker flags](https://developer.apple.com/library/mac/qa/qa1490/_index.html).
+1. _(If using Swift)_ Import [Bugfender.swift](https://raw.githubusercontent.com/bugfender/BugfenderSDK-iOS/master/Swift/Bugfender.swift) helper file to your project. Add an `import BugfenderSDK` statement at the top.
+
+# Using Bugfender
+Once you have the framework in your project, here is how to use it.
+
+## Swift
+
+In your AppDelegate class:
+
+```Swift
+import BugfenderSDK
 ```
 
-If you prefer to install the SDK manually, go to your Project > Your Target > General > Linked Frameworks and Libraries and drag `BugfenderSDK.framework` there. Make sure you have `SystemConfiguration.framework` and `MobileCoreServices.framework` there as well. Also [add -ObjC to your linker flags](https://developer.apple.com/library/mac/qa/qa1490/_index.html).
+And add the following to `application(_:didFinishLaunchingWithOptions:)`:
+
+```Swift
+Bugfender.activateLogger("YOUR_APP_KEY")
+Bugfender.enableUIEventLogging() // optional, log user interactions automatically
+BFLog("Hello world!") // use BFLog as you would use NSLog
+```
+
+Then you may use `BFLog` as you would normally use `NSLog`.
+
+You may also want to specify a logging level by using the following helper functions:
+
+- `Bugfender.print(...)`: Default log.
+- `Bugfender.warning(...)`: Warning log.
+- `Bugfender.error(...)`: Error log.
+
+## Objective-C
 
 Make Bugfender available project-wide by adding the following line to the `.pch` file:
 
@@ -30,14 +67,14 @@ Get an API key from the [Bugfender console](https://app.bugfender.com/). In your
 {
     ...
     // Activate the remote logger with an App Key.
-    [Bugfender enableAllWithToken:@"YOUR_API_KEY"];
+    [Bugfender activateLogger:@"YOUR_APP_KEY"];
+    [Bugfender enableUIEventLogging]; // optional, log user interactions automatically
+    BFLog("Hello world!") // use BFLog as you would use NSLog
     ...
 }
 ```
 
-## 2. Send logs
-
-That's it! You don't have to do anything. Anything you write to `NSLog` will be received by Bugfender, plus user interactions will be logged automatically.
+Then you may use `BFLog` as you would normally use `NSLog`.
 
 You may also want to specify a logging level by using the following macros:
 
@@ -45,21 +82,26 @@ You may also want to specify a logging level by using the following macros:
 - `BFLogWarn(...)`: Warning log.
 - `BFLogErr(...)`: Error log.
 
-## 3. Send an Issue
+# Advanced features
+Check out the full documentation at [CocoaDocs](http://cocoadocs.org/docsets/BugfenderSDK/).
+
+## Sending issues
 
 Bugfender allows you to send issues to the server. An issue is similar to a session but they are showed in the `issues` section and you can send issues any time from the app, even if the device is not enabled in the system. Issues are useful to keep track of important errors that you can detect in your code.
 
 For sending an issue you can use the following function:
 
-	+(void)sendIssueWithTitle:(NSString*)title text:(NSString*)text;
+```objective-c
++(void)sendIssueWithTitle:(NSString*)title text:(NSString*)text;
+```
 
 *The `text` parameter has Markdown notation support on the server, so you can add some style to the text being sent.*
 
 Here you have an example on how to send an issue using Markdown for the text:
 
-	[Bugfender sendIssueWithTitle:@"App Error" text:@"We have found an **Error**, we need to check it"];
-
-# Advanced features
+```objective-c
+[Bugfender sendIssueWithTitle:@"App Error" text:@"We have found an **Error**, we need to check it"];
+```
 
 ## Having your app decide when to send logs
 
@@ -98,58 +140,3 @@ Bugfender keeps up to 5 MB worth of log data in the device. This way Bugfender c
 // Setting maximum cache size to 1 Mb
 [Bugfender setMaximumLocalStorageSize:1024*1024];
 ```
-
-## Advanced logging
-
-When compiling in DEBUG, Bugfender will also print messages to the console. Bugfender won't output anything on the console in release mode.
-
-Besides the logging level you can manually specify a tag o set of tags (string separated by comas) and a log level by using the following method:
-
-- `BFLog2(level, tag, ...)`: Where log level is one of the enums shown above, tag is an string containing tags separated by coma, and then the log itself.
-
-Use like this:
-
-```objective-c
-- (void)foo
-{
-    // Default log
-    BFLog(@"Foo method started at time: %@", [[NSDate date] description]);
-    
-    // Warning log
-    BFLogWarn(@"This is a warning with error code: %ld", 23);
-    
-    // Error log
-    BFLogErr(@"This is an error with error code: %ld", 42);
-    
-    // Custom log, specifiying level, tags, and the text
-    BFLog2(BFLogLevelWarning, @"networking, error", @"This is a warning with some tags. Error code: %ld", (long)23);
-}
-```
-
-# Swift
-
-Bugfender works well with Swift. Just follow the previous instructions, plus add the following line to your Bridging Header:
-
-```objective-c
-#import <BugfenderSDK/BugfenderSDK.h>
-```
-
-Use `Bugfender.LogLineNumber` method to log, or write a helper function similar to `println`:
-
-```swift
-func BFLog(message: String, filename: String = __FILE__, line: Int = __LINE__, funcname: String = __FUNCTION__) {
-    Bugfender.logLineNumber(line, method: funcname, file: filename.lastPathComponent, level: BFLogLevel.Default, tag: nil, message: message)
-    #if DEBUG
-        NSLog("[\(filename.lastPathComponent):\(line)] \(funcname) - %@", message)
-    #endif
-}
-```
-
-Use like this:
-```swift
-func sliderChanged(slider: UISlider) {
-    BFLog("Slider Value: \(slider.value)");
-}
-```
-
-Check out the full documentation at [CocoaDocs](http://cocoadocs.org/docsets/BugfenderSDK/).

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 class ViewController: UIViewController {
 
