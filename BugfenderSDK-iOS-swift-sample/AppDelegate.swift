@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let yourBugFenderAppKey = "4k4QFtHpvkQGDdCfF4fT6BAfv4PQpgGs" //TODO: insert your key here!
         
         Bugfender.activateLogger(yourBugFenderAppKey)
+        Bugfender.enableUIEventLogging()
         
         let string = Bugfender.deviceIdentifier();
         UserDefaults.standard.set(string, forKey: "device_id")
