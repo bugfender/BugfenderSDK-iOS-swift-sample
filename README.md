@@ -29,6 +29,14 @@ add here the key you got before
 - go to the project's directory
 - run 'fastlane build` | `fastlane test`
 
+`$ fastlane test`
+
+Installs pods, compiles & runs all tests
+
+`$ fastlane build`
+
+Installs pods, cleans previous compilations, bumps build number, compiles for the iOS simulator
+
 ## Xcode 8 / iOS 10 building on device
 
 If you open this project with Xcode 8 you'll see an error stating that:
