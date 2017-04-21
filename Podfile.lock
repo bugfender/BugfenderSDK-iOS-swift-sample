@@ -1,14 +1,12 @@
 PODS:
-  - BugfenderSDK/ObjC (1.4.1)
-  - BugfenderSDK/Swift (1.4.1):
-    - BugfenderSDK/ObjC
+  - BugfenderSDK/Swift (1.4.2)
 
 DEPENDENCIES:
-  - BugfenderSDK/Swift (~> 1.4)
+  - BugfenderSDK/Swift (~> 1.4.2)
 
 SPEC CHECKSUMS:
-  BugfenderSDK: ccb52e0a341be0a171c209a22638997864395995
+  BugfenderSDK: 2327672fcc5b7b713728387a500c08e06fcd3f89
 
-PODFILE CHECKSUM: e7f021397839bca10c1a4ab0002664f2e1a2055a
+PODFILE CHECKSUM: ab14e02beb2d51577be5361a734e283d9bb327a5
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.0
