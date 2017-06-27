@@ -1,7 +1,25 @@
 # BugfenderSDK-iOS-swift-sample
-Example code using Bugfender in Swift iOS.
+Sample code using the Bugfender Remote Logging library in Swift. iOS Example.
 
 [![Build Status](https://travis-ci.org/bugfender/BugfenderSDK-iOS-swift-sample.svg)](https://travis-ci.org/bugfender/BugfenderSDK-iOS-swift-sample)
+
+## What is this?
+
+This App shows you how simple is it to setup & use the Bugfender Remote Logging library for iOS. We have a [Firsts Steps](http://support.bugfender.com/getting-started/first-steps-with-bugfender) post showing you how to create a free account in Bugfender site to run & check this example.
+
+## Bugfender - iOS setup
+
+In order to log things remotely, you'll need:
+
+- an account at [Bugfender](https://bugfender.com)
+    - an App created for that account, and copying its identifier
+- add Bugfender SDK iOS library to your project. You have all the information [here](https://bugfender.com/platforms/ios/) but basically it is:
+    - adding a dependency to your Cocoapods `Podfile` (something like `pod 'BugfenderSDK/Swift', '~> 1.4.2'`) 
+)
+    - enablig Bugfender: `Bugfender.activateLogger(yourBugFenderAppKey)`
+- start logging things!
+    - `BFLog("BugfenderSDK Hello World")`
+        
 
 ## How to Build
 
